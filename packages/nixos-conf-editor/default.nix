@@ -8,6 +8,7 @@
 , git
 , glib
 , gnome
+, adwaita-icon-theme
 , gtk4
 , gtksourceview5
 , libadwaita
@@ -51,7 +52,7 @@ stdenv.mkDerivation rec {
   buildInputs = [
     gdk-pixbuf
     glib
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     gtk4
     gtksourceview5
     libadwaita
