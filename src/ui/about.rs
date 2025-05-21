@@ -19,12 +19,15 @@ impl SimpleComponent for AboutPageModel {
             set_modal: true,
             set_application_name: "NixOS Configuration Editor",
             set_application_icon: config::APP_ID,
-            set_developer_name: "Orzklv",
+            set_developer_name: "Xinux Developers",
             set_version: config::VERSION,
             set_issue_url: "https://github.com/xinux-org/conf-editor/issues",
             set_license_type: gtk::License::Gpl30,
             set_website: "https://github.com/xinux-org/conf-editor",
-            set_developers: &["Orzklv https://github.com/orzklv"],
+            set_developers: &[
+              "Orzklv https://github.com/orzklv"
+              "Victor Fuentes https://github.com/vlinkz"
+            ],
         }
     }
 

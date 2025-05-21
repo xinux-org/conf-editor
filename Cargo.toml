@@ -3,29 +3,37 @@ name = "nixos-conf-editor"
 version = "0.1.2"
 edition = "2021"
 default-run = "nixos-conf-editor"
+authors = [
+  "Sokhibjon Orzikulov <sakhib@orzklv.uz>",
+  "Victor Fuentes <vlinkz@snowflakeos.org>",
+]
 
 [dependencies]
-relm4 = { version = "0.5.1", features = ["libadwaita"]  }
-relm4-components = { package = "relm4-components", version = "0.5.1"}
-adw = { package = "libadwaita", version = "0.2", features = ["v1_2", "gtk_v4_6"] }
+relm4 = { version = "0.5.1", features = ["libadwaita"] }
+relm4-components = { package = "relm4-components", version = "0.5.1" }
+adw = { package = "libadwaita", version = "0.2", features = [
+  "v1_2",
+  "gtk_v4_6",
+] }
 gtk = { package = "gtk4", version = "0.5", features = ["v4_6"] }
 sourceview5 = { version = "0.5", features = ["v5_4"] }
 vte = { package = "vte4", version = "0.5" }
 tracker = "0.2"
-tokio = { version = "1.24", features = ["rt", "macros", "time", "rt-multi-thread", "sync"] }
-
+tokio = { version = "1.24", features = [
+  "rt",
+  "macros",
+  "time",
+  "rt-multi-thread",
+  "sync",
+] }
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 ijson = "0.1"
-
 nix-editor = "0.3.0"
 nix-data = "0.0.3"
-
 anyhow = "1.0"
-
 html2pango = "0.5"
 pandoc = "0.8"
-
 log = "0.4"
 pretty_env_logger = "0.4"
 gettext-rs = { version = "0.7", features = ["gettext-system"] }
