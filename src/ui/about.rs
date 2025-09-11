@@ -25,7 +25,8 @@ impl SimpleComponent for AboutPageModel {
             set_license_type: gtk::License::Gpl30,
             set_website: "https://github.com/xinux-org/conf-editor",
             set_developers: &[
-              "Orzklv https://github.com/orzklv"
+              "Orzklv https://github.com/orzklv",
+              "bahrom04 https://github.com/bahrom04",
               "Victor Fuentes https://github.com/vlinkz"
             ],
         }
