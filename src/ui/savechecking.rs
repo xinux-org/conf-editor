@@ -1,6 +1,7 @@
 use super::window::AppMsg;
 use crate::ui::optionpage::OptPageMsg;
 use adw::prelude::*;
+use gettextrs::gettext;
 use log::{debug, info};
 use relm4::*;
 use sourceview5::prelude::*;
@@ -132,14 +133,14 @@ impl SimpleComponent for SaveErrorModel {
             set_modal: true,
             #[watch]
             set_visible: !model.hidden,
-            set_text: Some("Invalid configuration"),
-            set_secondary_text: Some("Please fix the errors and try again."),
+            set_text: Some(&gettext("Invalid configuration")),
+            set_secondary_text: Some(&gettext("Please fix the errors and try again.")),
             #[watch]
             set_default_height: -1,
             set_default_width: 500,
-            add_button: ("Keep changes", gtk::ResponseType::DeleteEvent),
-            add_button: ("Reset", gtk::ResponseType::Reject),
-            add_button: ("Edit", gtk::ResponseType::Cancel),
+            add_button: (&gettext("Keep changes"), gtk::ResponseType::DeleteEvent),
+            add_button: (&gettext("Reset"), gtk::ResponseType::Reject),
+            add_button: (&gettext("Edit"), gtk::ResponseType::Cancel),
             connect_response[sender] => move |_, resp| {
                 sender.input(match resp {
                     gtk::ResponseType::DeleteEvent => SaveErrorMsg::SaveError,
