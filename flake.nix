@@ -12,6 +12,7 @@
     inputs.xinux-lib.mkFlake {
       inherit inputs;
       alias.packages.default = "nixos-conf-editor";
+      alias.shells.default = "nixos-conf-editor";
       src = ./.;
     };
 }
