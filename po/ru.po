@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-15 17:04+0500\n"
-"PO-Revision-Date: 2025-09-15 17:16+0500\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2025-09-15 19:47+0500\n"
+"PO-Revision-Date: 2025-09-16 15:26+0500\n"
+"Last-Translator: BeMeritus <bemerituss@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: src/ui/quitdialog.rs:35
 msgid "Save Changes?"
-msgstr "a"
+msgstr "Сохранить изменения?"
 
 #: src/ui/quitdialog.rs:36
 msgid ""
@@ -29,207 +29,215 @@ msgid ""
 "however is is possible that your configuration is save in an unbuildable "
 "state."
 msgstr ""
+"Несохранённые изменения будут потеряны. Вам следует пересобрать систему "
+"сейчас, чтобы убедиться, что всё настроено правильно. Вы также можете "
+"сохранить конфигурацию, однако существует вероятность, что она сохранится в "
+"состоянии, не подлежащем сборке."
 
 #: src/ui/quitdialog.rs:38 src/ui/windowloading.rs:142
 msgid "Quit"
-msgstr ""
+msgstr "Выйти"
 
 #: src/ui/quitdialog.rs:39 src/ui/optionpage.rs:400 src/ui/nameentry.rs:36
 msgid "Save"
-msgstr ""
+msgstr "Сохранить"
 
 #: src/ui/quitdialog.rs:40 src/ui/window.rs:250
 msgid "Rebuild"
-msgstr ""
+msgstr "Восстановить"
 
 #: src/ui/optionpage.rs:82
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: src/ui/optionpage.rs:132
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: src/ui/optionpage.rs:158
 msgid "Default"
-msgstr ""
+msgstr "Стандартный"
 
 #: src/ui/optionpage.rs:211
 msgid "Example"
-msgstr ""
+msgstr "Пример"
 
 #: src/ui/optionpage.rs:265
 msgid "Value"
-msgstr ""
+msgstr "Ценить"
 
 #: src/ui/optionpage.rs:297
 msgid "True"
-msgstr ""
+msgstr "Истинный"
 
 #: src/ui/optionpage.rs:306
 msgid "False"
-msgstr ""
+msgstr "Ложный"
 
 #: src/ui/optionpage.rs:334
 msgid "Attribute Value"
-msgstr ""
+msgstr "Значение атрибута"
 
 #: src/ui/optionpage.rs:379 src/ui/savechecking.rs:142
 msgid "Reset"
-msgstr ""
+msgstr "Сбросить"
 
 #: src/ui/optionpage.rs:387
 msgid "Clear"
-msgstr ""
+msgstr "Чистый"
 
 #: src/ui/welcome.rs:56
 msgid "Welcome the NixOS Configuration Editor!"
-msgstr ""
+msgstr "Добро пожаловать в Редактор конфигурации NixOS!"
 
 #: src/ui/welcome.rs:61
 msgid ""
 "If your configuration file is not in the default location, you can change it "
 "here."
 msgstr ""
+"Если ваш файл конфигурации не находится в местоположении по умолчанию, вы "
+"можете изменить его здесь."
 
 #: src/ui/welcome.rs:69 src/ui/preferencespage.rs:59
 msgid "Configuration file"
-msgstr ""
+msgstr "Файл конфигурации"
 
 #: src/ui/welcome.rs:106 src/ui/preferencespage.rs:109
 msgid "Flake file"
-msgstr ""
+msgstr "Флаковый файл"
 
 #: src/ui/welcome.rs:107
 msgid ""
 "If you are using flakes, you can specify the path to your flake.nix file "
 "here."
 msgstr ""
+"Если вы используете флаки, вы можете указать путь к вашему файлу flake.nix "
+"здесь."
 
 #: src/ui/welcome.rs:153
 msgid "Continue"
-msgstr ""
+msgstr "Продолжить"
 
 #: src/ui/windowloading.rs:38
 msgid "Could not load cache"
-msgstr ""
+msgstr "Не удалось загрузить кэш"
 
 #: src/ui/windowloading.rs:40
 msgid "Try connecting to the internet or launching the application again"
-msgstr ""
+msgstr "Попробуйте подключиться к интернету или снова запустить приложение"
 
 #: src/ui/windowloading.rs:52
 msgid "Could not load options"
-msgstr ""
+msgstr "Не удалось загрузить параметры"
 
 #: src/ui/windowloading.rs:53 src/ui/windowloading.rs:99
 msgid "Try launching the application again"
-msgstr ""
+msgstr "Попробуйте запустить приложение снова"
 
 #: src/ui/windowloading.rs:64 src/ui/windowloading.rs:98
 msgid "Error loading configuration file"
-msgstr ""
+msgstr "Ошибка загрузки файла конфигурации"
 
 #: src/ui/windowloading.rs:140
 msgid "Retry"
-msgstr ""
+msgstr "Повторить попытку"
 
 #: src/ui/windowloading.rs:141
 msgid "Preferences"
-msgstr ""
+msgstr "Предпочтения"
 
 #: src/ui/searchpage.rs:35 src/ui/window.rs:276
 msgid "Attributes"
-msgstr ""
+msgstr "Атрибуты"
 
 #: src/ui/searchpage.rs:37 src/ui/window.rs:312
 msgid "Options"
-msgstr ""
+msgstr "Параметры"
 
 #: src/ui/searchpage.rs:58
 msgid "No options found!"
-msgstr ""
+msgstr "Вариантов нет!"
 
 #: src/ui/searchpage.rs:59
 msgid "Try a different search"
-msgstr ""
+msgstr "Попробуйте другой поиск"
 
 #: src/ui/preferencespage.rs:91
 msgid "Use nix flakes"
-msgstr ""
+msgstr "Использовать никс флаки"
 
 #: src/ui/preferencespage.rs:149
 msgid "Flake arguments (--flake path/to/flake.nix#&lt;THIS ENTRY&gt;)"
-msgstr ""
+msgstr "Флейковые аргументы (--flake path/to/flake.nix#&lt;THIS ENTRY&gt;)"
 
 #: src/ui/window.rs:190
 msgid "Configuration Editor"
-msgstr ""
+msgstr "Редактор конфигураций"
 
 #: src/ui/window.rs:270
 msgid "Loading..."
-msgstr ""
+msgstr "Загрузка..."
 
 #: src/ui/window.rs:286
 msgid "<ADD>"
-msgstr ""
+msgstr "<ADD>"
 
 #: src/ui/rebuild.rs:81
 msgid "Building..."
-msgstr ""
+msgstr "Здание..."
 
 #: src/ui/rebuild.rs:95
 msgid "Done!"
-msgstr ""
+msgstr "Готово!"
 
 #: src/ui/rebuild.rs:99
 msgid "Rebuild successful!"
-msgstr ""
+msgstr "Восстановитесь успешно!"
 
 #: src/ui/rebuild.rs:113
 msgid "Error!"
-msgstr ""
+msgstr "Ошибка!"
 
 #: src/ui/rebuild.rs:117
 msgid "Rebuild failed! See below for error message."
-msgstr ""
+msgstr "Восстановление не удалось! Для получения сообщения об ошибке см. ниже."
 
 #: src/ui/rebuild.rs:150
 msgid "Close"
-msgstr ""
+msgstr "Закрыть"
 
 #: src/ui/rebuild.rs:159
 msgid "Save Anyways"
-msgstr ""
+msgstr "Сохранить в любом случае"
 
 #: src/ui/rebuild.rs:167
 msgid "Reset Changes"
-msgstr ""
+msgstr "Сбросить изменения"
 
 #: src/ui/rebuild.rs:175
 msgid "Keep Editing"
-msgstr ""
+msgstr "Продолжить редактирование"
 
 #: src/ui/nameentry.rs:34
 msgid "Enter a new <name> value"
-msgstr ""
+msgstr "Введите новое значение <name>"
 
 #: src/ui/nameentry.rs:37
-msgid "Cancel)"
-msgstr ""
+msgid "Cancel"
+msgstr "Отменить"
 
 #: src/ui/savechecking.rs:136
 msgid "Invalid configuration"
-msgstr ""
+msgstr "Неверная конфигурация"
 
 #: src/ui/savechecking.rs:137
 msgid "Please fix the errors and try again."
-msgstr ""
+msgstr "Пожалуйста, исправьте ошибки и попробуйте снова."
 
 #: src/ui/savechecking.rs:141
 msgid "Keep changes"
-msgstr ""
+msgstr "Сохранить изменения"
 
 #: src/ui/savechecking.rs:143
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
