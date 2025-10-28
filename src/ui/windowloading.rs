@@ -2,6 +2,7 @@ use super::window::{AppMsg, LoadValues};
 use crate::parse::config::parseconfig;
 use crate::parse::options::read;
 use crate::parse::preferences::editconfig;
+use gettextrs::gettext;
 use log::*;
 use nix_data::config::configfile::NixDataConfig;
 use relm4::adw::prelude::*;
@@ -34,10 +35,10 @@ impl Worker for WindowAsyncHandler {
                     Err(e) => {
                         error!("{}", e);
                         let _ = sender.output(AppMsg::LoadError(
-                            String::from("Could not load cache"),
-                            String::from(
+                            String::from(&gettext("Could not load cache")),
+                            String::from(&gettext(
                                 "Try connecting to the internet or launching the application again",
-                            ),
+                            )),
                         ));
                         return;
                     }
@@ -48,8 +49,8 @@ impl Worker for WindowAsyncHandler {
                     Err(e) => {
                         error!("{}", e);
                         let _ = sender.output(AppMsg::LoadError(
-                            String::from("Could not load options"),
-                            String::from("Try launching the application again"),
+                            String::from(&gettext("Could not load options")),
+                            String::from(&gettext("Try launching the application again")),
                         ));
                         return;
                     }
@@ -60,7 +61,7 @@ impl Worker for WindowAsyncHandler {
                     Err(e) => {
                         error!("{}", e);
                         let _ = sender.output(AppMsg::LoadError(
-                            String::from("Error loading configuration file"),
+                            String::from(&gettext("Error loading configuration file")),
                             format!("<tt>{}</tt> may be an invalid configuration file", path),
                         ));
                         return;
@@ -94,8 +95,8 @@ impl Worker for WindowAsyncHandler {
                 let _ = match editconfig(cfg) {
                     Ok(_) => sender.output(AppMsg::TryLoad),
                     Err(_) => sender.output(AppMsg::LoadError(
-                        String::from("Error loading configuration file"),
-                        String::from("Try launching the application again"),
+                        String::from(&gettext("Error loading configuration file")),
+                        String::from(&gettext("Try launching the application again")),
                     )),
                 };
             }
@@ -136,9 +137,9 @@ impl SimpleComponent for LoadErrorModel {
             set_secondary_text: Some(&model.msg2),
             set_use_markup: true,
             set_secondary_use_markup: true,
-            add_button: ("Retry", gtk::ResponseType::Accept),
-            add_button: ("Preferences", gtk::ResponseType::Help),
-            add_button: ("Quit", gtk::ResponseType::Close),
+            add_button: (&gettext("Retry"), gtk::ResponseType::Accept),
+            add_button: (&gettext("Preferences"), gtk::ResponseType::Help),
+            add_button: (&gettext("Quit"), gtk::ResponseType::Close),
             connect_response[sender] => move |_, resp| {
                 sender.input(match resp {
                     gtk::ResponseType::Accept => LoadErrorMsg::Retry,

@@ -1,6 +1,7 @@
 use super::window::AppMsg;
 use crate::config::LIBEXECDIR;
 use adw::prelude::*;
+use gettextrs::gettext;
 use gtk::{gio, glib};
 use relm4::*;
 use std::io::Write;
@@ -77,7 +78,7 @@ impl SimpleComponent for RebuildModel {
                             set_height_request: 60,
                         },
                         gtk::Label {
-                            set_label: "Building...",
+                            set_label: &gettext("Building..."),
                             add_css_class: "title-1",
                         },
                     },
@@ -91,11 +92,11 @@ impl SimpleComponent for RebuildModel {
                             set_pixel_size: 128,
                         },
                         gtk::Label {
-                            set_label: "Done!",
+                            set_label: &gettext("Done!"),
                             add_css_class: "title-1",
                         },
                         gtk::Label {
-                            set_label: "Rebuild successful!",
+                            set_label: &gettext("Rebuild successful!"),
                             add_css_class: "dim-label",
                         }
                     },
@@ -109,11 +110,11 @@ impl SimpleComponent for RebuildModel {
                             set_pixel_size: 128,
                         },
                         gtk::Label {
-                            set_label: "Error!",
+                            set_label: &gettext("Error!"),
                             add_css_class: "title-1",
                         },
                         gtk::Label {
-                            set_label: "Rebuild failed! See below for error message.",
+                            set_label: &gettext("Rebuild failed! See below for error message."),
                             add_css_class: "dim-label",
                         }
                     }
@@ -146,7 +147,7 @@ impl SimpleComponent for RebuildModel {
                     #[track(model.changed(RebuildModel::status()))]
                     set_visible: model.status != RebuildStatus::Building,
                     gtk::Button {
-                        set_label: "Close",
+                        set_label: &gettext("Close"),
                         #[track(model.changed(RebuildModel::status()))]
                         set_visible: model.status == RebuildStatus::Success,
                         connect_clicked[sender] => move |_| {
@@ -155,7 +156,7 @@ impl SimpleComponent for RebuildModel {
                     },
                     gtk::Button {
                         add_css_class: "destructive-action",
-                        set_label: "Save Anyways",
+                        set_label: &gettext("Save Anyways"),
                         #[track(model.changed(RebuildModel::status()))]
                         set_visible: model.status == RebuildStatus::Error,
                         connect_clicked[sender] => move |_| {
@@ -163,7 +164,7 @@ impl SimpleComponent for RebuildModel {
                         }
                     },
                     gtk::Button {
-                        set_label: "Reset Changes",
+                        set_label: &gettext("Reset Changes"),
                         #[track(model.changed(RebuildModel::status()))]
                         set_visible: model.status == RebuildStatus::Error,
                         connect_clicked[sender] => move |_| {
@@ -171,7 +172,7 @@ impl SimpleComponent for RebuildModel {
                         }
                     },
                     gtk::Button {
-                        set_label: "Keep Editing",
+                        set_label: &gettext("Keep Editing"),
                         #[track(model.changed(RebuildModel::status()))]
                         set_visible: model.status == RebuildStatus::Error,
                         connect_clicked[sender] => move |_| {
