@@ -32,6 +32,7 @@ use crate::ui::rebuild::RebuildMsg;
 use crate::ui::searchentry::SearchEntryMsg;
 use crate::ui::windowloading::LoadErrorMsg;
 use adw::prelude::*;
+use gettextrs::gettext;
 use log::*;
 use nix_data::config::configfile::NixDataConfig;
 use relm4::gtk::glib::object::Cast;
@@ -186,7 +187,7 @@ impl SimpleComponent for AppModel {
                         set_transition_type: gtk::StackTransitionType::Crossfade,
                         #[name(title)]
                         gtk::Label {
-                            set_label: "Configuration Editor",
+                            set_label: &gettext("Configuration Editor"),
                         },
 
                         #[name(buttons)]
@@ -246,7 +247,7 @@ impl SimpleComponent for AppModel {
                         },
                     },
                     pack_start = &gtk::Button {
-                        set_label: "Rebuild",
+                        set_label: &gettext("Rebuild"),
                         connect_clicked[sender] => move |_| {
                             sender.input(AppMsg::Rebuild);
                         },
@@ -266,13 +267,13 @@ impl SimpleComponent for AppModel {
                             set_height_request: 80,
                         },
                         gtk::Label {
-                            set_label: "Loading...",
+                            set_label: &gettext("Loading..."),
                         },
                     },
                     #[name(treeview)]
                     adw::PreferencesPage {
                         add: attrgroup = &adw::PreferencesGroup {
-                            set_title: "Attributes",
+                            set_title: &gettext("Attributes"),
                             #[track(model.changed(AppModel::position()))]
                             set_visible: !model.attributes.is_empty() || model.nameorstar != AddAttrOptions::None,
                             #[local_ref]
@@ -282,7 +283,7 @@ impl SimpleComponent for AppModel {
                                 append: addrow = &adw::PreferencesRow { // Change to suffix once libadwaita-rs 0.2 is out
                                     #[track(model.changed(AppModel::nameorstar()))]
                                     set_visible: model.nameorstar != AddAttrOptions::None,
-                                    set_title: "<ADD>",
+                                    set_title: &gettext("<ADD>"),
                                     #[wrap(Some)]
                                     set_child = &gtk::Box {
                                         set_margin_all: 15,
@@ -308,7 +309,7 @@ impl SimpleComponent for AppModel {
                             },
                         },
                         add = &adw::PreferencesGroup {
-                            set_title: "Options",
+                            set_title: &gettext("Options"),
                             #[track(model.changed(AppModel::position()))]
                             set_visible: !model.options.is_empty(),
                             #[local_ref]

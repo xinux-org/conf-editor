@@ -2,6 +2,7 @@ use super::savechecking::*;
 use super::window::*;
 use crate::parse::options::OptionData;
 use adw::prelude::*;
+use gettextrs::gettext;
 use html2pango;
 use log::*;
 use pandoc::{self, MarkdownExtension};
@@ -78,7 +79,7 @@ impl SimpleComponent for OptPageModel {
                             gtk::Label {
                                 set_halign: gtk::Align::Start,
                                 add_css_class: "heading",
-                                set_label: "Description",
+                                set_label: &gettext("Description"),
                             }
                         },
                         #[name(desc)]
@@ -128,7 +129,7 @@ impl SimpleComponent for OptPageModel {
                             gtk::Label {
                                 set_halign: gtk::Align::Start,
                                 add_css_class: "heading",
-                                set_label: "Type",
+                                set_label: &gettext("Type"),
                             }
                         },
                         gtk::Label {
@@ -154,7 +155,7 @@ impl SimpleComponent for OptPageModel {
                             gtk::Label {
                                 set_halign: gtk::Align::Start,
                                 add_css_class: "heading",
-                                set_label: "Default",
+                                set_label: &gettext("Default"),
                             }
                         },
                         gtk::Frame {
@@ -207,7 +208,7 @@ impl SimpleComponent for OptPageModel {
                                 set_halign: gtk::Align::Start,
                                 add_css_class: "heading",
                                 add_css_class: "h4",
-                                set_label: "Example",
+                                set_label: &gettext("Example"),
                             }
                         },
                         gtk::Frame {
@@ -261,7 +262,7 @@ impl SimpleComponent for OptPageModel {
                             append = &gtk::Label {
                                 set_halign: gtk::Align::Start,
                                 add_css_class: "heading",
-                                set_label: "Value",
+                                set_label: &gettext("Value"),
                             }
                         },
                         #[name(valuestack)]
@@ -293,7 +294,7 @@ impl SimpleComponent for OptPageModel {
                                 set_orientation: gtk::Orientation::Horizontal,
                                 #[name(truebtn)]
                                 gtk::ToggleButton {
-                                    set_label: "True",
+                                    set_label: &gettext("True"),
                                     connect_toggled[sender] => move |x| {
                                         if x.is_active() {
                                             sender.input(OptPageMsg::UpdateConfMod(String::from("true")))
@@ -302,7 +303,7 @@ impl SimpleComponent for OptPageModel {
                                 },
                                 #[name(falsebtn)]
                                 gtk::ToggleButton {
-                                    set_label: "False",
+                                    set_label: &gettext("False"),
                                     set_group: Some(&truebtn),
                                     connect_toggled[sender] => move |x| {
                                         if x.is_active() {
@@ -330,7 +331,7 @@ impl SimpleComponent for OptPageModel {
                             gtk::Label {
                                 set_halign: gtk::Align::Start,
                                 add_css_class: "heading",
-                                set_label: "Attribute Value",
+                                set_label: &gettext("Attribute Value"),
                             }
                         },
                         gtk::Frame {
@@ -375,7 +376,7 @@ impl SimpleComponent for OptPageModel {
                             set_orientation: gtk::Orientation::Horizontal,
                             set_spacing: 10,
                             gtk::Button {
-                                set_label: "Reset",
+                                set_label: &gettext("Reset"),
                                 #[watch]
                                 set_sensitive: model.conf != model.modifiedconf,
                                 connect_clicked[sender] => move |_| {
@@ -383,7 +384,7 @@ impl SimpleComponent for OptPageModel {
                                 }
                             },
                             gtk::Button {
-                                set_label: "Clear",
+                                set_label: &gettext("Clear"),
                                 #[watch]
                                 set_sensitive: !model.modifiedconf.is_empty(),
                                 connect_clicked[sender] => move |_| {
@@ -396,7 +397,7 @@ impl SimpleComponent for OptPageModel {
                                 set_hexpand: true,
                                 #[name(savebtn)]
                                 gtk::Button {
-                                    set_label: "Save",
+                                    set_label: &gettext("Save"),
                                     add_css_class: "suggested-action",
                                     #[watch]
                                     set_sensitive: model.conf != model.modifiedconf,
