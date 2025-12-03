@@ -1,5 +1,6 @@
 use super::window::AppMsg;
 use adw::prelude::*;
+use gettextrs::gettext;
 use relm4::*;
 
 pub struct QuitCheckModel {
@@ -31,12 +32,12 @@ impl SimpleComponent for QuitCheckModel {
             set_resizable: false,
             #[watch]
             set_sensitive: !model.busy,
-            set_text: Some("Save Changes?"),
-            set_secondary_text: Some("Unsaved changes will be lost. You should rebuild your system now to ensure you configured everything properly. You can also save your configuration, however is is possible that your configuration is save in an unbuildable state."),
+            set_text: Some(&gettext("Save Changes?")),
+            set_secondary_text: Some(&gettext("Unsaved changes will be lost. You should rebuild your system now to ensure you configured everything properly. You can also save your configuration, however is is possible that your configuration is save in an unbuildable state.")),
             set_default_width: 500,
-            add_button: ("Quit", gtk::ResponseType::Close),
-            add_button: ("Save", gtk::ResponseType::Reject),
-            add_button: ("Rebuild", gtk::ResponseType::Accept),
+            add_button: (&gettext("Quit"), gtk::ResponseType::Close),
+            add_button: (&gettext("Save"), gtk::ResponseType::Reject),
+            add_button: (&gettext("Rebuild"), gtk::ResponseType::Accept),
             connect_response[sender] => move |_, resp| {
                 sender.input(match resp {
                     gtk::ResponseType::Accept => QuitCheckMsg::Rebuild,

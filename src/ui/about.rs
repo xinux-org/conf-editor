@@ -27,6 +27,7 @@ impl SimpleComponent for AboutPageModel {
             set_developers: &[
               "Orzklv https://github.com/orzklv",
               "bahrom04 https://github.com/bahrom04",
+              "BeMeritus https://github.com/bemeritus",
               "Victor Fuentes https://github.com/vlinkz"
             ],
         }
