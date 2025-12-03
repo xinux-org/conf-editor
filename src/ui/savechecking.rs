@@ -71,7 +71,8 @@ impl Worker for SaveAsyncHandler {
                         match Command::new("nix").arg("eval").arg("nixpkgs#path").output() {
                             Ok(nixpath) => {
                                 let nixospath = format!(
-                                    "{}/nixos/lib/eval-config.nix",
+                                    // it returns /nix/store/ ++ nixos/
+                                    "{}nixos/lib/eval-config.nix",
                                     String::from_utf8_lossy(&nixpath.stdout).trim()
                                 );
                                 Command::new("nix-instantiate")
