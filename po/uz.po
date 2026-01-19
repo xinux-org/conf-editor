@@ -44,7 +44,7 @@ msgstr "Saqlash"
 
 #: src/ui/quitdialog.rs:40 src/ui/window.rs:250
 msgid "Rebuild"
-msgstr "Qayta qurmoq"
+msgstr "Qayta qurish"
 
 #: src/ui/optionpage.rs:82
 msgid "Description"
@@ -72,11 +72,11 @@ msgstr "To‘g‘ri"
 
 #: src/ui/optionpage.rs:306
 msgid "False"
-msgstr "Xato"
+msgstr "Yolgʻon"
 
 #: src/ui/optionpage.rs:334
 msgid "Attribute Value"
-msgstr "Yolg‘on"
+msgstr "Atribut qiymati"
 
 #: src/ui/optionpage.rs:379 src/ui/savechecking.rs:142
 msgid "Reset"
@@ -84,7 +84,7 @@ msgstr "Asliga qaytarish"
 
 #: src/ui/optionpage.rs:387
 msgid "Clear"
-msgstr "Tiniq"
+msgstr "Tozalash"
 
 #: src/ui/welcome.rs:56
 msgid "Welcome the NixOS Configuration Editor!"
@@ -164,7 +164,7 @@ msgstr "Boshqa qidiruvni sinang"
 
 #: src/ui/preferencespage.rs:91
 msgid "Use nix flakes"
-msgstr "Niks fleyklardan foydalaning"
+msgstr "Nix fleyklardan foydalaning"
 
 #: src/ui/preferencespage.rs:149
 msgid "Flake arguments (--flake path/to/flake.nix#&lt;THIS ENTRY&gt;)"
@@ -188,7 +188,7 @@ msgstr "Qurilmoqda..."
 
 #: src/ui/rebuild.rs:95
 msgid "Done!"
-msgstr "Bo‘ldi!"
+msgstr "Tamom!"
 
 #: src/ui/rebuild.rs:99
 msgid "Rebuild successful!"
@@ -196,7 +196,7 @@ msgstr "Qayta qurish muvaffaqiyatli amalga oshirildi!"
 
 #: src/ui/rebuild.rs:113
 msgid "Error!"
-msgstr "Xato!"
+msgstr "Xatolik!"
 
 #: src/ui/rebuild.rs:117
 msgid "Rebuild failed! See below for error message."

@@ -84,7 +84,7 @@ msgstr "Сбросить"
 
 #: src/ui/optionpage.rs:387
 msgid "Clear"
-msgstr "Чистый"
+msgstr "Очистить"
 
 #: src/ui/welcome.rs:56
 msgid "Welcome the NixOS Configuration Editor!"
