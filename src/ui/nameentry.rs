@@ -1,5 +1,6 @@
 use super::window::*;
 use adw::prelude::*;
+use gettextrs::gettext;
 use relm4::*;
 
 pub struct NameEntryModel {
@@ -30,10 +31,10 @@ impl SimpleComponent for NameEntryModel {
             set_modal: true,
             #[watch]
             set_visible: !model.hidden,
-            set_text: Some("Enter a new <name> value"),
+            set_text: Some(&gettext("Enter a new <name> value")),
             set_secondary_text: None,
-            add_button: ("Save", gtk::ResponseType::Accept),
-            add_button: ("Cancel", gtk::ResponseType::Cancel),
+            add_button: (&gettext("Save"), gtk::ResponseType::Accept),
+            add_button: (&gettext("Cancel"), gtk::ResponseType::Cancel),
             connect_response[sender] => move |_, resp| {
                 sender.input(match resp {
                     gtk::ResponseType::Accept => NameEntryMsg::Save,

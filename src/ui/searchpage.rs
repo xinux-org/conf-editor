@@ -1,6 +1,7 @@
 use super::{searchfactory::SearchOption, window::*};
 use crate::parse::config::opconfigured;
 use adw::prelude::*;
+use gettextrs::gettext;
 use relm4::{factory::*, *};
 use std::{cmp::Ordering, collections::HashMap};
 
@@ -31,9 +32,9 @@ impl SimpleComponent for SearchPageModel {
             set_transition_type: gtk::StackTransitionType::Crossfade,
             #[name(options)]
             adw::PreferencesPage {
-                set_title: "Attributes",
+                set_title: &gettext("Attributes"),
                 add = &adw::PreferencesGroup {
-                    set_title: "Options",
+                    set_title: &gettext("Options"),
                     #[local_ref]
                     add = oplstbox -> gtk::ListBox {
                         add_css_class: "boxed-list",
@@ -54,8 +55,8 @@ impl SimpleComponent for SearchPageModel {
                 set_valign: gtk::Align::Center,
                 adw::StatusPage {
                     set_icon_name: Some("edit-find-symbolic"),
-                    set_title: "No options found!",
-                    set_description: Some("Try a different search"),
+                    set_title: &gettext("No options found!"),
+                    set_description: Some(&gettext("Try a different search")),
                 },
             }
         }

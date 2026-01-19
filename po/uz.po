@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-15 19:47+0500\n"
+"PO-Revision-Date: 2025-09-15 19:49+0500\n"
+"Last-Translator: BeMeritus <bemerituss@gmail.com>\n"
+"Language-Team: \n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: src/ui/quitdialog.rs:35
+msgid "Save Changes?"
+msgstr "O‘zgarishlar saqlansinmi?"
+
+#: src/ui/quitdialog.rs:36
+msgid ""
+"Unsaved changes will be lost. You should rebuild your system now to ensure "
+"you configured everything properly. You can also save your configuration, "
+"however is is possible that your configuration is save in an unbuildable "
+"state."
+msgstr ""
+"Saqlanmagan o‘zgarishlar o‘chib ketadi. Hamma narsani to‘g‘ri "
+"sozlaganingizga ishonch hosil qilish uchun tizimingizni hoziroq qayta "
+"qurishingiz kerak. Konfiguratsiyangizni saqlashingiz ham mumkin, lekin "
+"konfiguratsiyangiz qurilmaydigan holatda saqlangan bo‘lishi mumkin."
+
+#: src/ui/quitdialog.rs:38 src/ui/windowloading.rs:142
+msgid "Quit"
+msgstr "Chiqish"
+
+#: src/ui/quitdialog.rs:39 src/ui/optionpage.rs:400 src/ui/nameentry.rs:36
+msgid "Save"
+msgstr "Saqlash"
+
+#: src/ui/quitdialog.rs:40 src/ui/window.rs:250
+msgid "Rebuild"
+msgstr "Qayta qurish"
+
+#: src/ui/optionpage.rs:82
+msgid "Description"
+msgstr "Tavsif"
+
+#: src/ui/optionpage.rs:132
+msgid "Type"
+msgstr "Tur"
+
+#: src/ui/optionpage.rs:158
+msgid "Default"
+msgstr "Standart"
+
+#: src/ui/optionpage.rs:211
+msgid "Example"
+msgstr "Misol"
+
+#: src/ui/optionpage.rs:265
+msgid "Value"
+msgstr "Qiymat"
+
+#: src/ui/optionpage.rs:297
+msgid "True"
+msgstr "Rost"
+
+#: src/ui/optionpage.rs:306
+msgid "False"
+msgstr "Yolgʻon"
+
+#: src/ui/optionpage.rs:334
+msgid "Attribute Value"
+msgstr "Atribut qiymati"
+
+#: src/ui/optionpage.rs:379 src/ui/savechecking.rs:142
+msgid "Reset"
+msgstr "Asliga qaytarish"
+
+#: src/ui/optionpage.rs:387
+msgid "Clear"
+msgstr "Tozalash"
+
+#: src/ui/welcome.rs:56
+msgid "Welcome the NixOS Configuration Editor!"
+msgstr "NixOS konfiguratsiya muharririga xush kelibsiz!"
+
+#: src/ui/welcome.rs:61
+msgid ""
+"If your configuration file is not in the default location, you can change it "
+"here."
+msgstr ""
+"Agar konfiguratsiya faylingiz birlamchi joylashuvda bo‘lmasa, uni bu yerda "
+"o‘zgartirishingiz mumkin."
+
+#: src/ui/welcome.rs:69 src/ui/preferencespage.rs:59
+msgid "Configuration file"
+msgstr "Konfiguratsiya fayli"
+
+#: src/ui/welcome.rs:106 src/ui/preferencespage.rs:109
+msgid "Flake file"
+msgstr "Flake fayl"
+
+#: src/ui/welcome.rs:107
+msgid ""
+"If you are using flakes, you can specify the path to your flake.nix file "
+"here."
+msgstr ""
+"Agar flakes ishlatayotgan bo‘lsangiz, bu yerda flake.nix fayliga yo‘lni "
+"ko‘rsatishingiz mumkin."
+
+#: src/ui/welcome.rs:153
+msgid "Continue"
+msgstr "Davom ettirish"
+
+#: src/ui/windowloading.rs:38
+msgid "Could not load cache"
+msgstr "Kesh yuklanmadi"
+
+#: src/ui/windowloading.rs:40
+msgid "Try connecting to the internet or launching the application again"
+msgstr "Internetga ulaning yoki ilovani qaytadan ishga tushiring"
+
+#: src/ui/windowloading.rs:52
+msgid "Could not load options"
+msgstr "Variantlar yuklanmadi"
+
+#: src/ui/windowloading.rs:53 src/ui/windowloading.rs:99
+msgid "Try launching the application again"
+msgstr "Ilovani qaytadan ishga tushiring"
+
+#: src/ui/windowloading.rs:64 src/ui/windowloading.rs:98
+msgid "Error loading configuration file"
+msgstr "Konfiguratsiya faylini yuklashda xatolik yuz berdi"
+
+#: src/ui/windowloading.rs:140
+msgid "Retry"
+msgstr "Qayta urinish"
+
+#: src/ui/windowloading.rs:141
+msgid "Preferences"
+msgstr "Sozlamalar"
+
+#: src/ui/searchpage.rs:35 src/ui/window.rs:276
+msgid "Attributes"
+msgstr "Atributlar"
+
+#: src/ui/searchpage.rs:37 src/ui/window.rs:312
+msgid "Options"
+msgstr "Variantlar"
+
+#: src/ui/searchpage.rs:58
+msgid "No options found!"
+msgstr "Hech qanday variant topilmadi!"
+
+#: src/ui/searchpage.rs:59
+msgid "Try a different search"
+msgstr "Boshqa qidiruvni sinang"
+
+#: src/ui/preferencespage.rs:91
+msgid "Use nix flakes"
+msgstr "Nix fleyklardan foydalaning"
+
+#: src/ui/preferencespage.rs:149
+msgid "Flake arguments (--flake path/to/flake.nix#&lt;THIS ENTRY&gt;)"
+msgstr "Fleyk argumentlari (--flake path/to/flake.nix#&lt;THIS ENTRY&gt;)"
+
+#: src/ui/window.rs:190
+msgid "Configuration Editor"
+msgstr "Konfiguratsiya muharriri"
+
+#: src/ui/window.rs:270
+msgid "Loading..."
+msgstr "Yuklanmoqda..."
+
+#: src/ui/window.rs:286
+msgid "<ADD>"
+msgstr "<ADD>"
+
+#: src/ui/rebuild.rs:81
+msgid "Building..."
+msgstr "Qurilmoqda..."
+
+#: src/ui/rebuild.rs:95
+msgid "Done!"
+msgstr "Tamom!"
+
+#: src/ui/rebuild.rs:99
+msgid "Rebuild successful!"
+msgstr "Qayta qurish muvaffaqiyatli amalga oshirildi!"
+
+#: src/ui/rebuild.rs:113
+msgid "Error!"
+msgstr "Xatolik!"
+
+#: src/ui/rebuild.rs:117
+msgid "Rebuild failed! See below for error message."
+msgstr ""
+"Qayta qurish amalga oshmadi! Xatolik xabari uchun quyidagilarga qarang."
+
+#: src/ui/rebuild.rs:150
+msgid "Close"
+msgstr "Yopish"
+
+#: src/ui/rebuild.rs:159
+msgid "Save Anyways"
+msgstr "Baribir saqlash"
+
+#: src/ui/rebuild.rs:167
+msgid "Reset Changes"
+msgstr "O‘zgarishlarni tiklash"
+
+#: src/ui/rebuild.rs:175
+msgid "Keep Editing"
+msgstr "Tahrirlashda davom etish"
+
+#: src/ui/nameentry.rs:34
+msgid "Enter a new <name> value"
+msgstr "Yangi <name> qiymatini kiriting"
+
+#: src/ui/nameentry.rs:37
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+#: src/ui/savechecking.rs:136
+msgid "Invalid configuration"
+msgstr "Konfiguratsiya yaroqsiz"
+
+#: src/ui/savechecking.rs:137
+msgid "Please fix the errors and try again."
+msgstr "Iltimos, xatolarni tuzating va qayta urining."
+
+#: src/ui/savechecking.rs:141
+msgid "Keep changes"
+msgstr "O‘zgarishlarni saqlash"
+
+#: src/ui/savechecking.rs:143
+msgid "Edit"
+msgstr "Tahrirlash"

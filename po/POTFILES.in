@@ -1,4 +1,11 @@
-data/org.xinux.NixosConfEditor.policy.in.in
-data/org.xinux.NixosConfEditor.desktop.in.in
-data/org.xinux.NixosConfEditor.metainfo.xml.in.in
-data/org.xinux.NixosConfEditor.metainfo.gschema.xml.in
+src/ui/quitdialog.rs
+src/ui/optionpage.rs
+src/ui/welcome.rs
+src/ui/windowloading.rs
+src/ui/searchpage.rs
+src/ui/preferencespage.rs
+src/ui/window.rs
+src/ui/rebuild.rs
+src/ui/about.rs
+src/ui/nameentry.rs
+src/ui/savechecking.rs
