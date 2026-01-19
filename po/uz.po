@@ -68,7 +68,7 @@ msgstr "Qiymat"
 
 #: src/ui/optionpage.rs:297
 msgid "True"
-msgstr "To‘g‘ri"
+msgstr "Rost"
 
 #: src/ui/optionpage.rs:306
 msgid "False"
